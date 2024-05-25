@@ -1,0 +1,22 @@
+{
+    "name": "Text to search",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "activeTab",
+        "bookmarks"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}
